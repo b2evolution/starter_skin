@@ -1,0 +1,24 @@
+# Starter Skin for b2evolution CMS v6
+
+Fork this repository and rename it when you start a new skin for b2evolution.
+
+We will keep this up to date to have the correct minimal files as well as up to date features for a b2evolution skin package.
+
+## Some tips:
+
+- Create a 720x570 pixels `skinshot.png` file for use within b2evolution to visually identify your skin.
+- Add some `skinshot_disp.jpg` images to demo the different "disps" of your skin(change the `_disp` part. See included `skinshot_posts.jpg` for example. 
+- You can also add additional images by numbering them, e-g: `skinshot_single_02.jpg`
+- When you publish your skin, update the readme.md file (it uses Markdown syntax) and include your skinshots like this:
+
+### Front Page
+
+![Front Page](skinshot_front.jpg)
+
+### Posts Page
+
+![Front Page](skinshot_posts.jpg)
+
+### Single Post Page
+
+![Front Page](skinshot_single.jpg)
