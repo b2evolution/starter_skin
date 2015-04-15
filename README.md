@@ -13,12 +13,12 @@ We will keep this up to date to have the correct minimal files as well as up to 
 
 ### Front Page
 
-![Front Page](skinshot_front.jpg)
+![disp=front](skinshot_front.jpg)
 
 ### Posts Page
 
-![Front Page](skinshot_posts.jpg)
+![disp=posts](skinshot_posts.jpg)
 
 ### Single Post Page
 
-![Front Page](skinshot_single.jpg)
+![disp=single](skinshot_single.jpg)
