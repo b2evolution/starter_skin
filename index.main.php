@@ -30,6 +30,7 @@ skin_init( $disp );
 skin_include( '_html_header.inc.php', array(
 	'html_tag' => '<!DOCTYPE html>'."\r\n"
 	             .'<html lang="'.locale_lang( false ).'">',
+	'viewport_tag' => '#responsive#',
 ) );
 // Note: You can customize the default HTML header by copying the generic
 // /skins/_html_header.inc.php file into the current skin folder.
@@ -152,6 +153,8 @@ siteskin_include( '_site_body_header.inc.php' );
 				'lostpassword_text' => '',
 				'account_activation' => '',
 				'msgform_text'      => '',
+				'user_text'         => '',
+				'users_text'        => '',
 			) );
 		// ----------------------------- END OF REQUEST TITLE ----------------------------
 	?>
@@ -308,9 +311,6 @@ siteskin_include( '_site_body_header.inc.php' );
 				'activate_form_title'  => T_('Account activation'),
 				'activate_page_before' => '<div class="wrap-form-activation">',
 				'activate_page_after'  => '</div>',
-				// Profile
-				'profile_avatar_before' => '<div class="panel panel-default profile_avatar">',
-				'profile_avatar_after'  => '</div>',
 				// Search
 				'search_input_before'  => '<div class="input-group">',
 				'search_input_after'   => '',

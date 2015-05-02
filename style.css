@@ -173,9 +173,6 @@ form.bComment {
 form.bComment .form-actions {
   margin-bottom: 0;
 }
-form.bComment legend {
-  padding: 0 10px;
-}
 form.bComment div.form-group,
 form.bComment div.custom_content {
   padding: 0 20px;
