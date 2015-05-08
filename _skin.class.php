@@ -17,17 +17,17 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
  */
 class starter_Skin extends Skin
 {
-  /**
+	/**
 	 * Get default name for the skin.
 	 * Note: the admin can customize it.
 	 */
 	function get_default_name()
 	{
-		return 'Starter Blog (Bootstrap)';
+		return 'Starter';
 	}
 
 
-  /**
+	/**
 	 * Get default type for the skin.
 	 */
 	function get_default_type()
@@ -37,8 +37,20 @@ class starter_Skin extends Skin
 
 
 	/**
-   * Get definitions for editable params
-   *
+	 * What evoSkins API does has this skin been designed with?
+	 *
+	 * This determines where we get the fallback templates from (skins_fallback_v*)
+	 * (allows to use new markup in new b2evolution versions)
+	 */
+	function get_api_version()
+	{
+		return 6;
+	}
+
+
+	/**
+	 * Get definitions for editable params
+	 *
 	 * @see Plugin::GetDefaultSettings()
 	 * @param local params like 'for_editing' => true
 	 */

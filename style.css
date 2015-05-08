@@ -1,10 +1,10 @@
-.pageHeader {
+.evo_container__header {
   margin-bottom: 20px;
 }
-.PageTop {
+.evo_container__page_top {
   margin-top: 20px;
 }
-.PageTop .widget--social-media-links {
+.evo_container__page_top .ufld_icon_links {
   text-align: right;
 }
 .nav.nav-tabs {
@@ -88,11 +88,11 @@ ul.profile_tabs {
   padding: 10px;
   margin-left: 10px;
 }
-form.bComment {
+.evo_form {
   border-color: #DDD;
   padding: 1em;
 }
-form.bComment .controls textarea.form-control {
+.evo_form .controls textarea.form-control {
   width: 100%;
 }
 input.search_field {
@@ -147,7 +147,7 @@ label.control-label[for=post_title] {
 .item_tags .controls {
   margin-left: 0;
 }
-.messages_list form.bComment {
+.evo_private_messages_list .evo_form {
   background: none;
 }
 textarea.message_text {
@@ -165,22 +165,22 @@ textarea.message_text {
 .comment_form .panel .panel-body {
   padding: 0;
 }
-form.bComment {
+.evo_form {
   border: none;
   padding: 0;
   overflow: visible;
 }
-form.bComment .form-actions {
+.evo_form .form-actions {
   margin-bottom: 0;
 }
-form.bComment div.form-group,
-form.bComment div.custom_content {
+.evo_form div.form-group,
+.evo_form div.custom_content {
   padding: 0 20px;
 }
-form.bComment fieldset {
+.evo_form fieldset {
   margin-top: 0;
 }
-form.bComment input[type=file] {
+.evo_form input[type=file] {
   display: inline;
 }
 #comment_date_field input {
@@ -231,20 +231,17 @@ form.bComment input[type=file] {
   padding-left: 15px;
   margin-bottom: 0;
 }
-.bPost {
+.evo_post {
   margin-bottom: 2em;
 }
-.bPost .bTitle {
-  margin: 0;
-}
-.bPost .small.text-muted {
+.evo_post .small.text-muted {
   margin: 4px 0 10px;
 }
-.bPost .small.text-muted a,
-.bPost .small.text-muted a .glyphicon {
+.evo_post .small.text-muted a,
+.evo_post .small.text-muted a .glyphicon {
   color: inherit;
 }
-form#user_checkchanges.bComment {
+form#user_checkchanges.evo_form {
   border: none;
 }
 div.bSideItem {
@@ -276,76 +273,76 @@ div.bSideItem h4 {
   width: 100%;
   text-align: center;
 }
-.wrap-form-login,
-.wrap-form-lostpass,
-.wrap-form-register,
-.wrap-form-activation {
+.evo_panel__login,
+.evo_panel__lostpass,
+.evo_panel__register,
+.evo_panel__activation {
   min-width: 290px;
   margin: 1.5em auto auto;
 }
-.wrap-form-login .panel,
-.wrap-form-lostpass .panel,
-.wrap-form-register .panel,
-.wrap-form-activation .panel {
+.evo_panel__login .panel,
+.evo_panel__lostpass .panel,
+.evo_panel__register .panel,
+.evo_panel__activation .panel {
   margin: 5px 0;
 }
-.wrap-form-login .panel-body,
-.wrap-form-lostpass .panel-body,
-.wrap-form-register .panel-body,
-.wrap-form-activation .panel-body {
+.evo_panel__login .panel-body,
+.evo_panel__lostpass .panel-body,
+.evo_panel__register .panel-body,
+.evo_panel__activation .panel-body {
   padding: 20px 30px 0;
 }
-.wrap-form-login {
+.evo_panel__login {
   max-width: 400px;
 }
-.wrap-form-lostpass {
+.evo_panel__lostpass {
   max-width: 480px;
 }
-.wrap-form-lostpass #ffield_x label {
+.evo_panel__lostpass #ffield_x label {
   display: none;
 }
-.wrap-form-activation {
+.evo_panel__activation {
   max-width: 530px;
 }
-.wrap-form-activation #activateinfo_form .control-buttons {
+.evo_panel__activation #activateinfo_form .control-buttons {
   text-align: left;
 }
-.wrap-form-register {
+.evo_panel__register {
   max-width: 580px;
 }
-.wrap-form-register .control-buttons {
+.evo_panel__register .control-buttons {
   text-align: left;
 }
-.wrap-form-register.register-disabled {
+.evo_panel__register.register-disabled {
   width: 350px;
 }
-.wrap-form-register .form-control#country,
-.wrap-form-register .form-control#u {
+.evo_panel__register .form-control#country,
+.evo_panel__register .form-control#u {
   width: 100%;
 }
-.form-login-links {
+.evo_form__login_links {
   padding: 0 5px;
   font-size: 92%;
 }
-.form-login fieldset {
+.evo_form__login fieldset {
   margin-bottom: 20px;
 }
-.form-login .controls {
+.evo_form__login .controls {
   padding: 0;
   margin: 0;
   width: 100%;
 }
-.form-login .control-buttons {
+.evo_form__login .control-buttons {
   margin-left: 0;
 }
-.form-login input.form-control[type=text],
-.form-login input.form-control[type=password] {
+.evo_form__login input.form-control[type=text],
+.evo_form__login input.form-control[type=password] {
   width: 100%;
 }
-.form-login .btn {
+.evo_form__login .btn {
   margin-top: 5px;
 }
-.form-login .form-actions {
+.evo_form__login .form-actions {
   padding: 0;
   margin: 0 0 20px;
   background: none;

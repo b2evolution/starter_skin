@@ -13,9 +13,9 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 
 global $app_version, $disp, $Blog;
 
-if( version_compare( $app_version, '5.0' ) < 0 )
+if( version_compare( $app_version, '6.4' ) < 0 )
 { // Older skins (versions 2.x and above) should work on newer b2evo versions, but newer skins may not work on older b2evo versions.
-	die( 'This skin is designed for b2evolution 5.0 and above. Please <a href="http://b2evolution.net/downloads/index.html">upgrade your b2evolution</a>.' );
+	die( 'This skin is designed for b2evolution 6.4 and above. Please <a href="http://b2evolution.net/downloads/index.html">upgrade your b2evolution</a>.' );
 }
 
 // This is the main template; it may be used to display very different things.
@@ -44,13 +44,13 @@ siteskin_include( '_site_body_header.inc.php' );
 	<div class="row">
 		<div class="col-md-12">
 
-<div class="PageTop">
+<div class="evo_container evo_container__page_top">
 	<?php
 		// ------------------------- "Page Top" CONTAINER EMBEDDED HERE --------------------------
 		// Display container and contents:
 		skin_container( NT_('Page Top'), array(
 				// The following params will be used as defaults for widgets included in this container:
-				'block_start'         => '<div class="widget $wi_class$">',
+				'block_start'         => '<div class="evo_widget $wi_class$">',
 				'block_end'           => '</div>',
 				'block_display_title' => false,
 				'list_start'          => '<ul>',
@@ -62,13 +62,13 @@ siteskin_include( '_site_body_header.inc.php' );
 	?>
 </div>
 
-<div class="pageHeader">
+<div class="evo_container evo_container__header">
 	<?php
 		// ------------------------- "Header" CONTAINER EMBEDDED HERE --------------------------
 		// Display container and contents:
 		skin_container( NT_('Header'), array(
 				// The following params will be used as defaults for widgets included in this container:
-				'block_start'       => '<div class="widget $wi_class$">',
+				'block_start'       => '<div class="evo_widget $wi_class$">',
 				'block_end'         => '</div>',
 				'block_title_start' => '<h1>',
 				'block_title_end'   => '</h1>',
@@ -112,10 +112,13 @@ siteskin_include( '_site_body_header.inc.php' );
 <!-- =================================== START OF FOOTER =================================== -->
 	<div class="row">
 		<div class="col-md-12 center">
+			<div class="evo_container evo_container__footer">
 	<?php
 		// Display container and contents:
 		skin_container( NT_("Footer"), array(
 				// The following params will be used as defaults for widgets included in this container:
+				'block_start'       => '<div class="evo_widget $wi_class$">',
+				'block_end'         => '</div>',
 			) );
 		// Note: Double quotes have been used around "Footer" only for test purposes.
 	?>
@@ -172,6 +175,7 @@ siteskin_include( '_site_body_header.inc.php' );
 			) );
 	?>
 
+			</div>
 		</div>
 	</div>
 </div>
