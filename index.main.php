@@ -164,80 +164,29 @@ siteskin_include( '_site_body_header.inc.php' );
 					'msgform_text'      => '',
 					'user_text'         => '',
 					'users_text'        => '',
+					'display_edit_links'=> false,
 				) );
 			// ----------------------------- END OF REQUEST TITLE ----------------------------
 		?>
 
 		<?php
 		// Go Grab the featured post:
-		if( $Item = & get_featured_Item() )
+		if( ! in_array( $disp, array( 'single', 'page' ) ) && $Item = & get_featured_Item() )
 		{ // We have a featured/intro post to display:
 			// ---------------------- ITEM BLOCK INCLUDED HERE ------------------------
-			echo '<div class="panel panel-default"><div class="panel-body">';
 			skin_include( '_item_block.inc.php', array(
 					'feature_block' => true,
 					'content_mode' => 'full', // We want regular "full" content, even in category browsing: i-e no excerpt or thumbnail
 					'intro_mode'   => 'normal',	// Intro posts will be displayed in normal mode
-					'item_class'   => 'featured_post',
+					'item_class'   => ($Item->is_intro() ? 'well evo_intro_post' : 'well evo_featured_post'),
 				) );
-			echo '</div></div>';
 			// ----------------------------END ITEM BLOCK  ----------------------------
-		}
-		?>
-
-		<?php
-		if( $disp != 'front' && $disp != 'download' && $disp != 'search' )
-		{
-			// -------------------- PREV/NEXT PAGE LINKS (POST LIST MODE) --------------------
-			mainlist_page_links( array(
-					'block_start' => '<div class="center"><ul class="pagination">',
-					'block_end' => '</ul></div>',
-					'page_current_template' => '<span><b>$page_num$</b></span>',
-					'page_item_before' => '<li>',
-					'page_item_after' => '</li>',
-				) );
-			// ------------------------- END OF PREV/NEXT PAGE LINKS -------------------------
-		?>
-
-		<?php
-			// --------------------------------- START OF POSTS -------------------------------------
-			// Display message if no post:
-			display_if_empty();
-
-			while( $Item = & mainlist_get_item() )
-			{ // For each blog post, do everything below up to the closing curly brace "}"
-
-				// ---------------------- ITEM BLOCK INCLUDED HERE ------------------------
-				skin_include( '_item_block.inc.php', array(
-						'content_mode' => 'auto',		// 'auto' will auto select depending on $disp-detail
-					) );
-				// ----------------------------END ITEM BLOCK  ----------------------------
-
-			} // ---------------------------------- END OF POSTS ------------------------------------
-		?>
-
-		<?php
-			// -------------------- PREV/NEXT PAGE LINKS (POST LIST MODE) --------------------
-			mainlist_page_links( array(
-					'block_start' => '<div class="center"><ul class="pagination">',
-					'block_end' => '</ul></div>',
-					'page_current_template' => '<span><b>$page_num$</b></span>',
-					'page_item_before' => '<li>',
-					'page_item_after' => '</li>',
-					'prev_text' => '&lt;&lt;',
-					'next_text' => '&gt;&gt;',
-				) );
-			// ------------------------- END OF PREV/NEXT PAGE LINKS -------------------------
 		}
 		?>
 
 		<?php
 			// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
 			skin_include( '$disp$', array(
-					'disp_posts'  => '',		// We already handled this case above
-					'disp_single' => '',		// We already handled this case above
-					'disp_page'   => '',		// We already handled this case above
-					'disp_front'  => '_front.disp.php',
 					'author_link_text' => 'preferredname',
 					// Profile tabs to switch between user edit forms
 					'profile_tabs' => array(
