@@ -6,7 +6,7 @@
  * This file is part of the b2evolution project - {@link http://b2evolution.net/}
  *
  * @package skins
- * @subpackage bootstrap_blog
+ * @subpackage starter_skin
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
 
@@ -15,8 +15,9 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
  *
  * ATTENTION: if you make a new skin you have to change the class name below accordingly
  */
-class bootstrap_blog_Skin extends Skin
+class starter_Skin extends Skin
 {
+	var $version = '1.0';
 	/**
 	 * Do we want to use style.min.css instead of style.css ?
 	 */
@@ -30,7 +31,7 @@ class bootstrap_blog_Skin extends Skin
 	 */
 	function get_default_name()
 	{
-		return 'Bootstrap Blog';
+		return 'Starter';
 	}
 
 
